@@ -6,16 +6,51 @@ html {
   min-height: 100%;
 }
 
+html,
+body,
+main {
+  background-color: $bg-dark;
+}
+
 header.titre {
   font-family: $font-family-sans-serif;
 }
 
-footer {
-  font-family: $font-family-serif;
-}
-
 main {
   margin-bottom: 100px;
+}
+
+.hero-scene {
+  margin: 20px;
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(../images/animaux.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    filter: brightness(0.5);
+  }
+
+  .hero-scene-content {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+footer,
+.hero-scene-content {
+  font-family: $font-family-serif;
 }
 
 footer.footer {
