@@ -11969,6 +11969,7 @@ textarea.form-control-lg {
 html {
   position: relative;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 html,
@@ -11982,7 +11983,11 @@ header.titre {
 }
 
 main {
-  margin-bottom: 100px;
+  margin-bottom: 130px;
+}
+
+.identity-connected {
+  list-style-type: none;
 }
 
 .hero-scene {
@@ -12011,8 +12016,93 @@ main {
   justify-content: center;
 }
 
+.savane {
+  position: relative;
+  margin: 20px;
+}
+.savane::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/savane.jpg");
+  background-size: auto;
+  background-position: center;
+  filter: brightness(0.5);
+}
+.savane * {
+  position: relative;
+}
+.savane .savane-content a {
+  color: white;
+  font-size: smaller;
+}
+.savane .savane-content h2, .savane .savane-content .h2 {
+  font-size: 14px;
+}
+
+.jungle {
+  position: relative;
+  margin: 20px;
+}
+.jungle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/jungle.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+}
+.jungle * {
+  position: relative;
+}
+.jungle .jungle-content a {
+  color: white;
+  font-size: smaller;
+}
+.jungle .jungle-content h2, .jungle .jungle-content .h2 {
+  font-size: 14px;
+}
+
+.marais {
+  position: relative;
+  margin: 20px;
+}
+.marais::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/marais.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+}
+.marais * {
+  position: relative;
+}
+.marais .marais-content a {
+  color: white;
+  font-size: smaller;
+}
+.marais .marais-content h2, .marais .marais-content .h2 {
+  font-size: 14px;
+}
+
+.service a {
+  color: black;
+}
+
 footer,
-.hero-scene-content {
+.hero-scene-content,
+.marais {
   font-family: "Roboto", serif;
 }
 
