@@ -4,18 +4,154 @@
 html {
   position: relative;
   min-height: 100%;
+  overflow-x: hidden;
+}
+
+html,
+body,
+main {
+  background-color: $bg-dark;
 }
 
 header.titre {
   font-family: $font-family-sans-serif;
 }
 
-footer {
-  font-family: $font-family-serif;
+main {
+  margin-bottom: 130px;
 }
 
-main {
-  margin-bottom: 100px;
+.identity-connected {
+  list-style-type: none;
+}
+
+.hero-scene {
+  margin: 20px;
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(../images/animaux.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    filter: brightness(0.5);
+  }
+
+  .hero-scene-content {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.savane {
+  position: relative;
+  margin: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/savane.jpg");
+    background-size: auto;
+    background-position: center;
+    filter: brightness(0.5);
+  }
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+  .savane-content {
+    a {
+      color: white;
+      font-size: smaller;
+    }
+    h2 {
+      font-size: 14px;
+    }
+  }
+}
+
+.jungle {
+  position: relative;
+  margin: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/jungle.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+  }
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+  .jungle-content {
+    a {
+      color: white;
+      font-size: smaller;
+    }
+    h2 {
+      font-size: 14px;
+    }
+  }
+}
+
+.marais {
+  position: relative;
+  margin: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/marais.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+  }
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+  .marais-content {
+    a {
+      color: white;
+      font-size: smaller;
+    }
+    h2 {
+      font-size: 14px;
+    }
+  }
+}
+
+.service {
+  a {
+    color: black;
+  }
+}
+
+footer,
+.hero-scene-content,
+.marais {
+  font-family: $font-family-serif;
 }
 
 footer.footer {
