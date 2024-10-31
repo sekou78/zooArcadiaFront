@@ -23,8 +23,8 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="black">
-        <div class="container-fluid d-flex justify-content-between">
-          <div class="col d-inline-flex p-2">
+        <div class="container-fluid">
+          <div class="p-2">
             <button
               class="navbar-toggler"
               type="button"
@@ -38,21 +38,14 @@
           </div>
 
           <div
-            class="text-center col p-2 fw-bold text-decoration-underline titre">
-            <a class="navbar-brand" href="/">ZOO ARCADIA</a>
+            class="text-center col p-2 order-lg-1 fw-bold text-decoration-underline titre">
+            <a class="navbar-brand me-0" href="/">ZOO ARCADIA</a>
           </div>
 
-          <div class="col p-2 d-flex justify-content-end">
-            <ul class="identity-connected">
-              <li>Nom</li>
-              <li>Prénom</li>
-              <li>Poste</li>
-            </ul>
-          </div>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul
-              class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-lg-around column-gap-5">
+          <div
+            class="collapse navbar-collapse m-3 order-lg-2"
+            id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2">
               <li class="nav-item">
                 <a class="nav-link" href="/">
                   <button class="bg-primary border-primary" type="button">
@@ -80,18 +73,26 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <button class="bg-primary border-primary" type="button">
-                    Compte
+                    Contact
                   </button>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/accueil-connectee">
                   <button class="bg-primary border-primary" type="button">
-                    Contact
+                    Compte
                   </button>
                 </a>
               </li>
+            </ul>
+          </div>
+
+          <div class="col p-2 d-flex justify-content-end order-lg-3">
+            <ul class="identity-connected">
+              <li>Nom</li>
+              <li>Prénom</li>
+              <li>Poste</li>
             </ul>
           </div>
         </div>
