@@ -12100,6 +12100,10 @@ main {
   color: black;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 footer,
 .hero-scene-content,
 .marais {
