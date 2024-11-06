@@ -4,9 +4,9 @@ import Route from "./Route.js";
 export const allRoutes = [
   new Route("/", "Accueil-visiteur", "/pages/accueil/accueil-visiteur.html"),
   new Route(
-    "/accueil-connectee",
-    "Accueil-connectee",
-    "/pages/accueil/accueil-connectee.html"
+    "/accueil-admin",
+    "Accueil-admin",
+    "/pages/accueil/accueil-admin.html"
   ),
   new Route("/contact", "Formulaire-contact", "/pages/contact.html"),
   new Route("/avis", "Votre-avis", "/pages/avis.html"),
@@ -20,6 +20,11 @@ export const allRoutes = [
     "/visite-habitat",
     "Visite-habitat",
     "/pages/services/visite-habitat.html"
+  ),
+  new Route(
+    "/visite-petit-train",
+    "Visite-petit-train",
+    "/pages/services/visite-petit-train.html"
   ),
 ];
 
