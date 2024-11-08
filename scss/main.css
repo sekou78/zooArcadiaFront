@@ -12232,7 +12232,7 @@ main {
 .d-block,
 .animaux-image {
   width: 100%;
-  height: 350px;
+  height: 500px;
 }
 
 .savane-big-title {
@@ -12281,6 +12281,32 @@ main {
   position: relative;
 }
 .jungle-big-title .jungle-big-title-content {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.marais-big-title {
+  margin-bottom: 15px;
+  position: relative;
+}
+.marais-big-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/marais.jpeg);
+  background-position: center;
+  background-size: inherit;
+  filter: brightness(0.5);
+}
+.marais-big-title * {
+  position: relative;
+}
+.marais-big-title .marais-big-title-content {
   height: 200px;
   display: flex;
   flex-direction: column;
