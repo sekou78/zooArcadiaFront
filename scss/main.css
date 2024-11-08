@@ -12229,9 +12229,36 @@ main {
   justify-content: space-around;
 }
 
-.d-block {
+.d-block,
+.animaux-image {
   width: 100%;
   height: 350px;
+}
+
+.savane-big-title {
+  margin-bottom: 15px;
+  position: relative;
+}
+.savane-big-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/savane.jpg);
+  background-position: center;
+  background-size: inherit;
+  filter: brightness(0.5);
+}
+.savane-big-title * {
+  position: relative;
+}
+.savane-big-title .savane-big-title-content {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .image-card {

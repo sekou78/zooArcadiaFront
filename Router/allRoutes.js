@@ -27,6 +27,7 @@ export const allRoutes = [
     "/pages/services/visite-petit-train.html"
   ),
   new Route("/habitats", "Les-habitats", "/pages/habitats/habitats.html"),
+  new Route("/savane", "La-savane", "/pages/habitats/savane.html"),
 ];
 
 //Le titre s'affiche comme ceci : Route.titre - websitename
