@@ -12261,6 +12261,32 @@ main {
   justify-content: space-around;
 }
 
+.jungle-big-title {
+  margin-bottom: 15px;
+  position: relative;
+}
+.jungle-big-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/jungle.jpg);
+  background-position: center;
+  background-size: inherit;
+  filter: brightness(0.5);
+}
+.jungle-big-title * {
+  position: relative;
+}
+.jungle-big-title .jungle-big-title-content {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .image-card {
   position: relative;
 }
