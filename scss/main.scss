@@ -259,6 +259,133 @@ main {
   text-align: justify;
 }
 
+//habitats
+.habitat-big-title {
+  margin-bottom: 15px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/habitat.webp);
+    background-position: center;
+    background-size: inherit;
+    filter: brightness(0.5);
+  }
+
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+
+  .habitat-big-title-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.d-block,
+.animaux-image {
+  width: 100%;
+  height: 500px;
+}
+
+//savane
+.savane-big-title {
+  margin-bottom: 15px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/savane.jpg);
+    background-position: center;
+    background-size: inherit;
+    filter: brightness(0.5);
+  }
+
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+
+  .savane-big-title-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+//Jungle
+.jungle-big-title {
+  margin-bottom: 15px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/jungle.jpg);
+    background-position: center;
+    background-size: inherit;
+    filter: brightness(0.5);
+  }
+
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+
+  .jungle-big-title-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+//Marais
+.marais-big-title {
+  margin-bottom: 15px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/marais.jpeg);
+    background-position: center;
+    background-size: inherit;
+    filter: brightness(0.5);
+  }
+
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+
+  .marais-big-title-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+//La carte
 .image-card {
   position: relative;
   &:hover {
