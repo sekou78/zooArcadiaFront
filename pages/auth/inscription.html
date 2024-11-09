@@ -1,0 +1,103 @@
+<div class="connexion-big-title text-center text-white">
+  <div class="connexion-big-title-content">
+    <h1 class="fs-1 fw-bold">Inscription</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col">
+    <form id="formulaireSignup">
+      <div class="mb-3">
+        <label for="NomSignupInput" class="form-label">Nom:</label>
+        <input
+          type="text"
+          class="form-control bg-body-secondary text-center"
+          id="NomSignupInput"
+          placeholder="Fath"
+          name="nom" />
+
+        <div class="invalid-feedback liens">Le nom est requis !</div>
+      </div>
+      <div class="mb-3">
+        <label for="PrenomSignupInput" class="form-label">Prenom:</label>
+        <input
+          type="text"
+          class="form-control bg-body-secondary text-center"
+          id="PrenomSignupInput"
+          placeholder="Dinga"
+          name="prenom" />
+
+        <div class="invalid-feedback liens">Le prénom est requis !</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="EmailSignupInput" class="form-label">Email:</label>
+        <input
+          type="email"
+          class="form-control bg-body-secondary text-center"
+          id="EmailSignupInput"
+          placeholder="mail@mail.com"
+          name="email" />
+
+        <div class="invalid-feedback liens">
+          Votre email n'est pas conforme !
+        </div>
+        <div class="valid-feedback liens">Email correct !</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="PasswordSignupInput" class="form-label"
+          >Mot de passe:</label
+        >
+        <input
+          type="password"
+          class="form-control bg-body-secondary text-center"
+          id="PasswordSignupInput"
+          placeholder="****************"
+          name="mdp" />
+
+        <div class="invalid-feedback liens">
+          Le mot de passe n'est pas conforme ! <br />
+          Au moins 8 caractères comprenant: <br />
+          1 lettre majuscule, <br />
+          1 lettre miniscule, <br />
+          1chiffre et <br />
+          1 caractères sepéciale
+        </div>
+        <div class="valid-feedback liens">Le mot de passe est conforme !</div>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input bg-body-secondary"
+          id="checkSignupPassword" />
+        <label class="form-check-label" for="checkSignupPassword">
+          Afficher le mot de passe
+        </label>
+      </div>
+
+      <div class="mb-3">
+        <label for="PosteInput" class="form-label">Poste:</label>
+        <input
+          type="text"
+          class="form-control bg-body-secondary text-center"
+          id="PosteInput" />
+      </div>
+
+      <div class="text-center">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="btn-validation-inscription">
+          Inscription
+        </button>
+      </div>
+    </form>
+    <div class="text-center pt-4">
+      <a href="/login" class="lien-inscription"
+        >Déjà inscrit, connectez-vous ICI!</a
+      >
+    </div>
+  </div>
+</div>
