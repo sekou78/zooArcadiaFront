@@ -11999,7 +11999,8 @@ a,
 .anv,
 article,
 .btn,
-p {
+p,
+form {
   font-family: "Roboto", serif;
 }
 

@@ -30,8 +30,18 @@ export const allRoutes = [
   new Route("/savane", "La-savane", "/pages/habitats/savane.html"),
   new Route("/jungle", "La-jungle", "/pages/habitats/jungle.html"),
   new Route("/marais", "La-marais", "/pages/habitats/marais.html"),
-  new Route("/login", "Connexion", "/pages/auth/login.html"),
-  new Route("/inscription", "Inscription", "/pages/auth/inscription.html"),
+  new Route(
+    "/login",
+    "Connexion",
+    "/pages/auth/login.html",
+    "/js/auth/login.js"
+  ),
+  new Route(
+    "/inscription",
+    "Inscription",
+    "/pages/auth/inscription.html",
+    "/js/auth/inscription.js"
+  ),
 ];
 
 //Le titre s'affiche comme ceci : Route.titre - websitename
