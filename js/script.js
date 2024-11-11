@@ -1,4 +1,8 @@
 const tokenCookieName = "accesstoken";
+const disconnect = document.getElementById("btn-deconnexion");
+const RoleCookieName = "role";
+
+disconnect.addEventListener("click", dIsconnect);
 
 function setToken(token) {
   setCookie(tokenCookieName, token, 7);
@@ -43,4 +47,10 @@ if (isConnected()) {
   alert("Je suis connecté");
 } else {
   alert("Je ne suis pas connecté");
+}
+
+function dIsconnect() {
+  eraseCookie(tokenCookieName);
+  eraseCookie(RoleCookieName);
+  window.location.reload();
 }
