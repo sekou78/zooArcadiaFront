@@ -7,6 +7,7 @@ inputLoginEmail.addEventListener("keyup", validateLoginForm);
 inputLoginPassword.addEventListener("keyup", validateLoginForm);
 checkboxLoginPassword.addEventListener("click", showLoginPassword);
 btnValidationLogin.disabled = true;
+btnValidationLogin.addEventListener("click", checkCredentials);
 
 function validateLoginForm() {
   const emailOK = validateLoginRequired(inputLoginEmail);
@@ -75,5 +76,23 @@ function showLoginPassword() {
     inputLoginPassword.type = "text";
   } else {
     inputLoginPassword.type = "password";
+  }
+}
+
+function checkCredentials() {
+  //Ici, on appel l'API pour vérifier les credentials en BDD
+  if (
+    inputLoginEmail.value == "test@mail.com" &&
+    inputLoginPassword.value == "Azerty$1"
+  ) {
+    //Il faudra récupérer le vrai token
+    const token = "cookiedeconnexionteste";
+    setToken(token);
+
+    //placer ce token en cookie
+    window.location.replace("/");
+  } else {
+    inputLoginEmail.classList.add("is-invalid");
+    inputLoginPassword.classList.add("is-invalid");
   }
 }
