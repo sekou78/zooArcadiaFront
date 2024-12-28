@@ -4,9 +4,19 @@
   </div>
 </div>
 
+<div class="text-center mb-3">
+  <button
+    type="button"
+    class="btn btn-primary text-white rounded"
+    data-bs-toggle="modal"
+    data-bs-target="#EditionPersonnelGuideModal">
+    Ajouter des personnels
+  </button>
+</div>
+
 <div class="text-center m-3">
   <div class="card mb-3">
-    <div class="row g-0">
+    <div class="row g-0 image-card-guide">
       <div class="col-md-4">
         <img
           src="/images/zooportrait.jpg"
@@ -29,11 +39,27 @@
           </ul>
         </div>
       </div>
+      <div class="action-image-buttons-guide" data-show="admin">
+        <button
+          type="button"
+          class="btn btn-outline-light bg-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#DeletePersonnelGuideModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light bg-success"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionPersonnelGuideModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
     </div>
   </div>
 
   <div class="card mb-3">
-    <div class="row g-0">
+    <div class="row g-0 image-card-guide">
       <div class="col-md-4">
         <img
           src="/images/zooportrait.jpg"
@@ -56,11 +82,27 @@
           </ul>
         </div>
       </div>
+      <div class="action-image-buttons-guide" data-show="admin">
+        <button
+          type="button"
+          class="btn btn-outline-light bg-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#DeletePersonnelGuideModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light bg-success"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionPersonnelGuideModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
     </div>
   </div>
 
   <div class="card mb-3">
-    <div class="row g-0">
+    <div class="row g-0 image-card-guide">
       <div class="col-md-4">
         <img
           src="/images/zooportrait.jpg"
@@ -81,6 +123,140 @@
             <li class="list-group-item">08:30am - 10:30am</li>
             <li class="list-group-item">13:30pm - 15:30pm</li>
           </ul>
+        </div>
+      </div>
+      <div class="action-image-buttons-guide" data-show="admin">
+        <button
+          type="button"
+          class="btn btn-outline-light bg-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#DeletePersonnelGuideModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light bg-success"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionPersonnelGuideModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Suppresion Guide -->
+  <div
+    class="modal fade"
+    id="DeletePersonnelGuideModal"
+    tabindex="-1"
+    aria-labelledby="DeletePersonnelGuideModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog text-center">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="DeletePersonnelGuideModalLabel">
+            Êtes-vous sûr de supprimer ce Guide ?
+          </h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nameGuideInput" class="form-label"
+                >dolor sit amet</label
+              >
+            </div>
+            <div class="mb-3">
+              <img class="image-plat" src="../images/test-image.png" />
+              <p class="name-guide">Name of guide</p>
+              <p class="text-guide">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
+                iusto maiores exercitationem odit quo aliquam possimus
+                perferendis dolores fugit tempora. Assumenda dolore iure
+                repellat accusamus at laborum quidem adipisci in.
+              </p>
+            </div>
+
+            <div class="text-center">
+              <button type="button" class="btn btn-danger">Supprimer</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Annuler
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Edition Guide -->
+  <div
+    class="modal fade"
+    id="EditionPersonnelGuideModal"
+    tabindex="-1"
+    aria-labelledby="EditionPersonnelGuideModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog text-center">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="EditionPersonnelGuideModalLabel">
+            Ajout du personnel
+          </h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nameGuideInput" class="form-label"
+                >Name of guide</label
+              >
+              <input type="text" class="form-control" id="nameGuideInput" />
+            </div>
+            <div class="mb-3">
+              <label for="ImageGuideInput" class="form-label">Image:</label>
+              <input
+                type="file"
+                class="form-control bg-body-secondary text-center"
+                id="ImageGuideInput" />
+              <img class="ImageGuideInput" src="" />
+            </div>
+            <div class="mb-3">
+              <label for="descriptionGuideInput" class="form-label"
+                >Description</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="descriptionGuideInput" />
+            </div>
+            <div class="mb-3">
+              <label for="disponibilite" class="form-label"
+                >Disponibilités:</label
+              >
+              <input type="hour" class="form-control" id="disponibilite" />
+            </div>
+
+            <div class="text-center">
+              <button type="button" class="btn btn-primary">Enregistrer</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Annuler
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

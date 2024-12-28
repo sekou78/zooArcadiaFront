@@ -90,7 +90,13 @@ function checkCredentials() {
     setToken(token);
 
     //placer ce token en cookie
-    window.location.replace("/");
+    setCookie(RoleCookieName, "admin", 7);
+
+    setCookie(RoleCookieName, "Employé", 7);
+
+    setCookie(RoleCookieName, "Vétérinaire", 7);
+
+    window.location.replace("/accueil-admin");
   } else {
     inputLoginEmail.classList.add("is-invalid");
     inputLoginPassword.classList.add("is-invalid");

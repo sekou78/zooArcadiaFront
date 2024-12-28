@@ -454,9 +454,42 @@ main {
   }
 }
 
+//La visite habitat
+.image-card-guide {
+  position: relative;
+  &:hover {
+    .action-image-buttons-guide {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-image-buttons-guide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
 footer.footer {
   padding: 10px;
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+//style li
+ul {
+  list-style-type: none;
 }

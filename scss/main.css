@@ -12373,9 +12373,37 @@ main {
   transition: all 0.3s;
 }
 
+.image-card-guide {
+  position: relative;
+}
+.image-card-guide:hover .action-image-buttons-guide {
+  opacity: 1;
+}
+.image-card-guide:hover img {
+  filter: brightness(0.5);
+}
+.image-card-guide img {
+  transition: all 0.3s;
+}
+.image-card-guide .action-image-buttons-guide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
 footer.footer {
   padding: 10px;
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+ul {
+  list-style-type: none;
 }/*# sourceMappingURL=main.css.map */
