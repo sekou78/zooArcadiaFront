@@ -12038,6 +12038,10 @@ main {
   justify-content: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .savane {
   position: relative;
   margin: 20px;
@@ -12262,6 +12266,31 @@ main {
   justify-content: space-around;
 }
 
+.card-savane {
+  position: relative;
+}
+.card-savane:hover .card-body,
+.card-savane:hover .action-image-buttons-savane {
+  opacity: 1;
+}
+.card-savane:hover img {
+  filter: brightness(0.5);
+}
+.card-savane img {
+  transition: all 0.3s;
+}
+.card-savane .action-image-buttons-savane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
 .jungle-big-title {
   margin-bottom: 15px;
   position: relative;
@@ -12288,6 +12317,31 @@ main {
   justify-content: space-around;
 }
 
+.card-jungle {
+  position: relative;
+}
+.card-jungle:hover .card-body,
+.card-jungle:hover .action-image-buttons-jungle {
+  opacity: 1;
+}
+.card-jungle:hover img {
+  filter: brightness(0.5);
+}
+.card-jungle img {
+  transition: all 0.3s;
+}
+.card-jungle .action-image-buttons-jungle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
 .marais-big-title {
   margin-bottom: 15px;
   position: relative;
@@ -12312,6 +12366,31 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.card-marais {
+  position: relative;
+}
+.card-marais:hover .card-body,
+.card-marais:hover .action-image-buttons-marais {
+  opacity: 1;
+}
+.card-marais:hover img {
+  filter: brightness(0.5);
+}
+.card-marais img {
+  transition: all 0.3s;
+}
+.card-marais .action-image-buttons-marais {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
 .connexion-big-title {
@@ -12402,8 +12481,4 @@ footer.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-ul {
-  list-style-type: none;
 }/*# sourceMappingURL=main.css.map */

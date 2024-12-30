@@ -73,6 +73,11 @@ main {
   }
 }
 
+//style li acccueils
+ul {
+  list-style-type: none;
+}
+
 .savane {
   position: relative;
   margin: 20px;
@@ -326,6 +331,35 @@ main {
   }
 }
 
+//Edition page animaux savane
+.card-savane {
+  position: relative;
+  &:hover {
+    .card-body,
+    .action-image-buttons-savane {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-image-buttons-savane {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
 //Jungle
 .jungle-big-title {
   margin-bottom: 15px;
@@ -356,6 +390,35 @@ main {
   }
 }
 
+//Edition page animaux jungle
+.card-jungle {
+  position: relative;
+  &:hover {
+    .card-body,
+    .action-image-buttons-jungle {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-image-buttons-jungle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
 //Marais
 .marais-big-title {
   margin-bottom: 15px;
@@ -383,6 +446,35 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+}
+
+//Edition page animaux jungle
+.card-marais {
+  position: relative;
+  &:hover {
+    .card-body,
+    .action-image-buttons-marais {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-image-buttons-marais {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
   }
 }
 
@@ -487,9 +579,4 @@ footer.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-//style li
-ul {
-  list-style-type: none;
 }

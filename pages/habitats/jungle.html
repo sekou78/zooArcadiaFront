@@ -6,7 +6,7 @@
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
   <div class="col">
-    <div class="card">
+    <div class="card card-jungle">
       <img
         src="/images/jungle/gorilles.jpg"
         class="card-img-top animaux-image"
@@ -24,10 +24,26 @@
         <a href="#" class="card-link">Fiche de l'animal</a>
         <a href="#" class="card-link">Etat de santé de l'animal</a>
       </div>
+      <div class="action-image-buttons-jungle" data-show="admin veterinaire">
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#DeleteAnimauxModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionAnimauxModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card card-jungle">
       <img
         src="/images/jungle/kangourou.jpg"
         class="card-img-top animaux-image"
@@ -45,10 +61,26 @@
         <a href="#" class="card-link">Fiche de l'animal</a>
         <a href="#" class="card-link">Etat de santé de l'animal</a>
       </div>
+      <div class="action-image-buttons-jungle" data-show="admin veterinaire">
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#DeleteAnimauxModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionAnimauxModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card card-jungle">
       <img
         src="/images/jungle/les_singes2.webp"
         class="card-img-top animaux-image"
@@ -66,10 +98,26 @@
         <a href="#" class="card-link">Fiche de l'animal</a>
         <a href="#" class="card-link">Etat de santé de l'animal</a>
       </div>
+      <div class="action-image-buttons-jungle" data-show="admin veterinaire">
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#DeleteAnimauxModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionAnimauxModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card card-jungle">
       <img
         src="/images/jungle/les_tigres.webp"
         class="card-img-top animaux-image"
@@ -87,10 +135,26 @@
         <a href="#" class="card-link">Fiche de l'animal</a>
         <a href="#" class="card-link">Etat de santé de l'animal</a>
       </div>
+      <div class="action-image-buttons-jungle" data-show="admin veterinaire">
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#DeleteAnimauxModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionAnimauxModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card card-jungle">
       <img
         src="/images/jungle/lion.jpg"
         class="card-img-top animaux-image"
@@ -108,10 +172,26 @@
         <a href="#" class="card-link">Fiche de l'animal</a>
         <a href="#" class="card-link">Etat de santé de l'animal</a>
       </div>
+      <div class="action-image-buttons-jungle" data-show="admin veterinaire">
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#DeleteAnimauxModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionAnimauxModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
     </div>
   </div>
   <div class="col">
-    <div class="card">
+    <div class="card card-jungle">
       <img
         src="/images/jungle/lion2.jpeg"
         class="card-img-top animaux-image"
@@ -128,6 +208,163 @@
       <div class="card-body text-center">
         <a href="#" class="card-link">Fiche de l'animal</a>
         <a href="#" class="card-link">Etat de santé de l'animal</a>
+      </div>
+      <div class="action-image-buttons-jungle" data-show="admin veterinaire">
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#DeleteAnimauxModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionAnimauxModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Suppresion animaux jungle -->
+<div
+  class="modal fade"
+  id="DeleteAnimauxModal"
+  tabindex="-1"
+  aria-labelledby="DeleteAnimauxModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog text-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="DeleteAnimauxModalLabel">
+          Êtes-vous sûr de supprimer la Description de cet animal ?
+        </h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <img class="image-plat w-100" src="../images/test-image.png" />
+          </div>
+          <div class="mb-3">
+            <label for="nameAnimalInput" class="form-label"
+              >Nom de l'animal</label
+            >
+            <input type="text" class="form-control" id="nameAnimalInput" />
+          </div>
+          <div class="mb-3">
+            <label for="raceAnimalInput" class="form-label">Race:</label>
+            <input type="text" class="form-control" id="raceAnimalInput" />
+          </div>
+          <div class="mb-3">
+            <label for="habitatAffectationInput" class="form-label"
+              >Habitat d'affectation:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="habitatAffectationInput" />
+          </div>
+          <div class="mb-3">
+            <label for="descriptionAnimalInput" class="form-label"
+              >Description</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="descriptionAnimalInput" />
+          </div>
+
+          <div class="text-center">
+            <button type="button" class="btn btn-danger">Supprimer</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Annuler
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edition animaux jungle -->
+<div
+  class="modal fade"
+  id="EditionAnimauxModal"
+  tabindex="-1"
+  aria-labelledby="EditionAnimauxModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog text-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="EditionAnimauxModalLabel">
+          Description de l'animal
+        </h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="ImageAnimalInput" class="form-label">Image:</label>
+            <input
+              type="file"
+              class="form-control bg-body-secondary text-center"
+              id="ImageAnimalInput" />
+            <img class="ImageAnimalInput" src="" />
+          </div>
+          <div class="mb-3">
+            <label for="nameAnimalInput" class="form-label"
+              >Nom de l'animal</label
+            >
+            <input type="text" class="form-control" id="nameAnimalInput" />
+          </div>
+          <div class="mb-3">
+            <label for="raceAnimalInput" class="form-label">Race:</label>
+            <input type="text" class="form-control" id="raceAnimalInput" />
+          </div>
+          <div class="mb-3">
+            <label for="habitatAffectationInput" class="form-label"
+              >Habitat d'affectation:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="habitatAffectationInput" />
+          </div>
+          <div class="mb-3">
+            <label for="descriptionAnimalInput" class="form-label"
+              >Description</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="descriptionAnimalInput" />
+          </div>
+
+          <div class="text-center">
+            <button type="button" class="btn btn-primary">Enregistrer</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Annuler
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
