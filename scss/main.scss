@@ -226,6 +226,7 @@ ul {
   }
 }
 
+//Visite en petit train
 .visite-petit-train-big-title {
   margin-bottom: 15px;
   position: relative;
@@ -252,6 +253,35 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+}
+
+//Edition page visite en petit train
+.card-visite-petit-train {
+  position: relative;
+  &:hover {
+    .card-body,
+    .action-visite-petit-train {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-visite-petit-train {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
   }
 }
 
