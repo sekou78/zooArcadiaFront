@@ -45,6 +45,11 @@ main {
   list-style-type: none;
 }
 
+.img-potrait {
+  height: 280px;
+  display: flex;
+}
+
 .hero-scene {
   margin: 20px;
   * {
@@ -71,6 +76,11 @@ main {
     flex-direction: column;
     justify-content: center;
   }
+}
+
+//style li acccueils
+ul {
+  list-style-type: none;
 }
 
 .savane {
@@ -221,6 +231,7 @@ main {
   }
 }
 
+//Visite en petit train
 .visite-petit-train-big-title {
   margin-bottom: 15px;
   position: relative;
@@ -247,6 +258,35 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+}
+
+//Edition page visite en petit train
+.card-visite-petit-train {
+  position: relative;
+  &:hover {
+    .card-body,
+    .action-visite-petit-train {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-visite-petit-train {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
   }
 }
 
@@ -326,6 +366,35 @@ main {
   }
 }
 
+//Edition page animaux savane
+.card-savane {
+  position: relative;
+  &:hover {
+    .card-body,
+    .action-image-buttons-savane {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-image-buttons-savane {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
 //Jungle
 .jungle-big-title {
   margin-bottom: 15px;
@@ -356,6 +425,35 @@ main {
   }
 }
 
+//Edition page animaux jungle
+.card-jungle {
+  position: relative;
+  &:hover {
+    .card-body,
+    .action-image-buttons-jungle {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-image-buttons-jungle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
 //Marais
 .marais-big-title {
   margin-bottom: 15px;
@@ -383,6 +481,35 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+}
+
+//Edition page animaux jungle
+.card-marais {
+  position: relative;
+  &:hover {
+    .card-body,
+    .action-image-buttons-marais {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-image-buttons-marais {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
   }
 }
 
@@ -442,6 +569,34 @@ main {
   }
 
   .action-image-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
+//Les encadrant
+.image-card-encadrant {
+  position: relative;
+  &:hover {
+    .action-image-buttons-encadrant {
+      opacity: 1;
+    }
+    img {
+      filter: brightness(0.5);
+    }
+  }
+  img {
+    transition: all 0.3s;
+  }
+
+  .action-image-buttons-encadrant {
     position: absolute;
     top: 0;
     left: 0;

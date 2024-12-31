@@ -5,7 +5,7 @@
 </div>
 
 <div class="text-center m-3">
-  <div class="card mb-3">
+  <div class="card mb-3 card-visite-petit-train">
     <div class="row g-0">
       <div class="col-md-4">
         <img
@@ -30,10 +30,26 @@
         </div>
       </div>
     </div>
+    <div class="action-visite-petit-train" data-show="admin">
+      <button
+        type="button"
+        class="btn btn-outline-light text-black bg-danger"
+        data-bs-toggle="modal"
+        data-bs-target="#DeleteVisitePetitTrainModal">
+        <i class="bi bi-trash3"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-light text-black bg-success"
+        data-bs-toggle="modal"
+        data-bs-target="#EditionVisitePetitTrainModal">
+        <i class="bi bi-pencil-square"></i>
+      </button>
+    </div>
   </div>
 
   <div class="card mb-3">
-    <div class="row g-0">
+    <div class="row g-0 card-visite-petit-train">
       <div class="col-md-4">
         <img
           src="/images/parcours_jungle.jpg"
@@ -56,11 +72,27 @@
           </ul>
         </div>
       </div>
+      <div class="action-visite-petit-train" data-show="admin">
+        <button
+          type="button"
+          class="btn btn-outline-light text-black bg-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#DeleteVisitePetitTrainModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light text-black bg-success"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionVisitePetitTrainModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
     </div>
   </div>
 
   <div class="card mb-3">
-    <div class="row g-0">
+    <div class="row g-0 card-visite-petit-train">
       <div class="col-md-4">
         <img
           src="/images/parcours_marais.jpg"
@@ -82,6 +114,127 @@
             <li class="list-group-item">13:30pm - 15:30pm</li>
           </ul>
         </div>
+      </div>
+      <div class="action-visite-petit-train" data-show="admin">
+        <button
+          type="button"
+          class="btn btn-outline-light text-black bg-danger"
+          data-bs-toggle="modal"
+          data-bs-target="#DeleteVisitePetitTrainModal">
+          <i class="bi bi-trash3"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light text-black bg-success"
+          data-bs-toggle="modal"
+          data-bs-target="#EditionVisitePetitTrainModal">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Suppresion visite-petit-train -->
+<div
+  class="modal fade"
+  id="DeleteVisitePetitTrainModal"
+  tabindex="-1"
+  aria-labelledby="DeleteVisitePetitTrainModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog text-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="DeleteVisitePetitTrainModalLabel">
+          Êtes-vous sûr de supprimer cet parcours ?
+        </h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nomDuParcoursInput" class="form-label"
+              >Nom du parcours</label
+            >
+            <input type="text" class="form-control" id="nomDuParcoursInput" />
+          </div>
+
+          <div class="text-center">
+            <button type="button" class="btn btn-danger">Supprimer</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Annuler
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edition visite-petit-train -->
+<div
+  class="modal fade"
+  id="EditionVisitePetitTrainModal"
+  tabindex="-1"
+  aria-labelledby="EditionVisitePetitTrainModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog text-center">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="EditionVisitePetitTrainModalLabel">
+          Description de l'animal
+        </h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nomDuParcoursInput" class="form-label"
+              >Nom du parcours</label
+            >
+            <input type="text" class="form-control" id="nomDuParcoursInput" />
+          </div>
+          <div class="mb-3">
+            <label for="descriptionAnimalInput" class="form-label"
+              >Description</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="descriptionAnimalInput" />
+          </div>
+          <div class="mb-3">
+            <img class="image-plat w-100" src="../images/test-image.png" />
+          </div>
+          <div class="mb-3">
+            <label for="disponibilitésInput" class="form-label"
+              >Disponibilités:</label
+            >
+            <input type="text" class="form-control" id="disponibilitésInput" />
+            <input type="text" class="form-control" id="disponibilitésInput" />
+          </div>
+
+          <div class="text-center">
+            <button type="button" class="btn btn-primary">Enregistrer</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal">
+              Annuler
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
