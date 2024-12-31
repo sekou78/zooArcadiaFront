@@ -8,3 +8,6 @@ C'est un site pour le sujet de l'ecf studi.
         -$ npm install bootstrap
         -$ npm i bootstrap-icons
 
+# Comment lancer
+
+    Lancer avec le php server

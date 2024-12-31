@@ -22,6 +22,11 @@ export const allRoutes = [
     "/pages/services/visite-habitat.html"
   ),
   new Route(
+    "/les-encadrants",
+    "les-encadrants",
+    "/pages/services/les-encadrants.html"
+  ),
+  new Route(
     "/visite-petit-train",
     "Visite-petit-train",
     "/pages/services/visite-petit-train.html"
