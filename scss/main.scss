@@ -45,6 +45,11 @@ main {
   list-style-type: none;
 }
 
+.img-potrait {
+  height: 280px;
+  display: flex;
+}
+
 .hero-scene {
   margin: 20px;
   * {
@@ -576,11 +581,11 @@ ul {
   }
 }
 
-//La visite habitat
-.image-card-guide {
+//Les encadrant
+.image-card-encadrant {
   position: relative;
   &:hover {
-    .action-image-buttons-guide {
+    .action-image-buttons-encadrant {
       opacity: 1;
     }
     img {
@@ -591,7 +596,7 @@ ul {
     transition: all 0.3s;
   }
 
-  .action-image-buttons-guide {
+  .action-image-buttons-encadrant {
     position: absolute;
     top: 0;
     left: 0;

@@ -12012,6 +12012,11 @@ main {
   list-style-type: none;
 }
 
+.img-potrait {
+  height: 280px;
+  display: flex;
+}
+
 .hero-scene {
   margin: 20px;
   position: relative;
@@ -12477,19 +12482,19 @@ ul {
   transition: all 0.3s;
 }
 
-.image-card-guide {
+.image-card-encadrant {
   position: relative;
 }
-.image-card-guide:hover .action-image-buttons-guide {
+.image-card-encadrant:hover .action-image-buttons-encadrant {
   opacity: 1;
 }
-.image-card-guide:hover img {
+.image-card-encadrant:hover img {
   filter: brightness(0.5);
 }
-.image-card-guide img {
+.image-card-encadrant img {
   transition: all 0.3s;
 }
-.image-card-guide .action-image-buttons-guide {
+.image-card-encadrant .action-image-buttons-encadrant {
   position: absolute;
   top: 0;
   left: 0;
