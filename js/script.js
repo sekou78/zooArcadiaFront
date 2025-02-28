@@ -44,11 +44,11 @@ function isConnected() {
   }
 }
 
-if (isConnected()) {
-  alert("Je suis connecté");
-} else {
-  alert("Je ne suis pas connecté");
-}
+// if (isConnected()) {
+//   alert("Je suis connecté");
+// } else {
+//   alert("Je ne suis pas connecté");
+// }
 
 //Deconnexion en supprimant les cookies
 function dIsconnect() {

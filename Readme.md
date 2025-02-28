@@ -10,4 +10,5 @@ C'est un site pour le sujet de l'ecf studi.
 
 # Comment lancer
 
-    Lancer avec le php server
+    - Lancer l'extension "watch sass" ou l'installer si c'est pas encore fait
+    - Lancer avec le php server

@@ -56,7 +56,7 @@ export const allRoutes = [
     "/inscription",
     "Inscription",
     "/pages/auth/inscription.html",
-    ["admin"],
+    [],
     "/js/auth/inscription.js"
   ),
 ];

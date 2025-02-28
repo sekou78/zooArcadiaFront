@@ -11,6 +11,7 @@ const inputInsciptionPoste = document.getElementById("PosteInsciptionInput");
 const btnValidationInscription = document.getElementById(
   "btn-validation-inscription"
 );
+const formInscriptionAdmin = document.getElementById("formulaireSignup");
 
 inputInsciptionNom.addEventListener("keyup", validateInsciptionForm);
 inputInsciptionPrenom.addEventListener("keyup", validateInsciptionForm);
@@ -19,6 +20,9 @@ inputInsciptionPassword.addEventListener("keyup", validateInsciptionForm);
 inputInsciptionPoste.addEventListener("change", validateInsciptionForm);
 checkboxInsciptionPassword.addEventListener("click", showInscriptionPassword);
 btnValidationInscription.disabled = true;
+
+//Evenement de validation de l'inscription
+btnValidationInscription.addEventListener("click", inscriptionAdmin);
 
 function validateInsciptionForm() {
   const nomOK = validateInscriptionRequired(inputInsciptionNom);
@@ -99,4 +103,59 @@ function showInscriptionPassword() {
   } else {
     inputInsciptionPassword.type = "password";
   }
+}
+
+//Fonction inscription de l'administrateur
+function inscriptionAdmin() {
+  let dataForm = new FormData(formInscriptionAdmin);
+
+  let posteSelect = dataForm.get("selectPoste");
+
+  // Vérifier si une option est sélectionnée
+  if (!posteSelect) {
+    alert("Veuillez sélectionner un poste !");
+    return; // Arrête l'exécution si aucun poste n'est sélectionné
+  }
+
+  // Mapping des valeurs du select aux rôles correspondants
+  const roleSelect = {
+    1: "ROLE_EMPLOYE",
+    2: "ROLE_VETERINAIRE",
+    3: "ROLE_ADMIN",
+  };
+
+  const role = roleSelect[posteSelect];
+
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  const raw = JSON.stringify({
+    email: dataForm.get("email"),
+    password: dataForm.get("mdp"),
+    roles: [role],
+    username: dataForm.get("email"),
+    nom: dataForm.get("nom"),
+    prenom: dataForm.get("prenom"),
+  });
+
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  fetch("http://127.0.0.1:8000/api/registration", requestOptions)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        alert("Une erreur s'est produite lors de l'inscription");
+      }
+    })
+    .then((result) => {
+      alert("Bravo " + dataForm.get("nom") + " votre compte a bien été créer");
+      document.location.href = "/login";
+    })
+    .catch((error) => console.error(error));
 }
