@@ -2,6 +2,7 @@ const inputLoginEmail = document.getElementById("EmailLoginInput");
 const inputLoginPassword = document.getElementById("PasswordLoginInput");
 const checkboxLoginPassword = document.getElementById("checkLoginPassword");
 const btnValidationLogin = document.getElementById("btn-validation-connexion");
+const formlogin = document.getElementById("formulaireLogin");
 
 inputLoginEmail.addEventListener("keyup", validateLoginForm);
 inputLoginPassword.addEventListener("keyup", validateLoginForm);
@@ -80,25 +81,39 @@ function showLoginPassword() {
 }
 
 function checkCredentials() {
-  //Ici, on appel l'API pour vérifier les credentials en BDD
-  if (
-    inputLoginEmail.value == "test@mail.com" &&
-    inputLoginPassword.value == "Azerty$1"
-  ) {
-    //Il faudra récupérer le vrai token
-    const token = "cookiedeconnexionteste";
-    setToken(token);
+  let dataForm = new FormData(formlogin);
 
-    //placer ce token en cookie
-    setCookie(RoleCookieName, "admin", 7);
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
 
-    setCookie(RoleCookieName, "Employé", 7);
+  const raw = JSON.stringify({
+    username: dataForm.get("email"),
+    password: dataForm.get("mdp"),
+  });
 
-    setCookie(RoleCookieName, "Vétérinaire", 7);
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
 
-    window.location.replace("/accueil-admin");
-  } else {
-    inputLoginEmail.classList.add("is-invalid");
-    inputLoginPassword.classList.add("is-invalid");
-  }
+  fetch(apiUrl + "login", requestOptions)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        inputLoginEmail.classList.add("is-invalid");
+        inputLoginPassword.classList.add("is-invalid");
+      }
+    })
+    .then((result) => {
+      const token = result.apiToken;
+      setToken(token);
+
+      setCookie(RoleCookieName, result.roles[0], 7);
+
+      window.location.href = "/";
+    })
+    .catch((error) => console.error(error));
 }

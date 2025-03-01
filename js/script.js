@@ -1,6 +1,7 @@
 const tokenCookieName = "accesstoken";
 const disconnect = document.getElementById("btn-deconnexion");
 const RoleCookieName = "role";
+const apiUrl = "http://127.0.0.1:8000/api/";
 
 disconnect.addEventListener("click", dIsconnect);
 
