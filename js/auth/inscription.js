@@ -107,7 +107,26 @@ function showInscriptionPassword() {
 
 //Fonction inscription de l'administrateur
 function inscriptionAdmin() {
+  // Si aucun administrateur n'existe, on continue avec la création du nouvel utilisateur
   let dataForm = new FormData(formInscriptionAdmin);
+
+  // Vérification si l'utilisateur est admin avant de continuer
+  if (!isAdmin()) {
+    alert(
+      "Non autorisé. Vous devez être administrateur pour créer un utilisateur."
+    );
+    return; // Arrêter l'exécution si l'utilisateur n'est pas admin
+  }
+
+  // Vérification s'il existe déjà un administrateur
+  checkIfAdminExists().then((adminExists) => {
+    if (adminExists) {
+      alert(
+        "Il existe déjà un administrateur. Vous ne pouvez pas en créer un autre."
+      );
+      return; // Arrête l'exécution si un administrateur existe déjà
+    }
+  });
 
   let posteSelect = dataForm.get("selectPoste");
 
