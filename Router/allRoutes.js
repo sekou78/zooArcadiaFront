@@ -8,9 +8,6 @@ export const allRoutes = [
     "/pages/accueil/accueil-visiteur.html",
     []
   ),
-  new Route("/page-admin", "Page-admin", "/pages/accueil/page-admin.html", [
-    "admin",
-  ]),
   new Route("/contact", "Formulaire-contact", "/pages/contact.html", []),
   new Route("/avis", "Votre-avis", "/pages/avis.html", []),
   new Route("/services", "Les-Services", "/pages/services/services.html", []),
@@ -55,6 +52,27 @@ export const allRoutes = [
     "/pages/auth/inscription.html",
     [],
     "/js/auth/inscription.js"
+  ),
+  new Route(
+    "/page-admin",
+    "Page-admin",
+    "/pages/accueil/page-admin.html",
+    ["admin"],
+    "/js/accueil/page-admin.js"
+  ),
+  new Route(
+    "/page-employe",
+    "Page-employe",
+    "/pages/accueil/page-employe.html",
+    ["employe"],
+    "/js/accueil/page-employe.js"
+  ),
+  new Route(
+    "/page-veterinaire",
+    "Page-veterinaire",
+    "/pages/accueil/page-veterinaire.html",
+    ["veterinaire"],
+    "/js/accueil/page-veterinaire.js"
   ),
 ];
 

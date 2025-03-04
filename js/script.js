@@ -40,11 +40,8 @@ function eraseCookie(name) {
 
 //Fonction de connexion en mettant place le token
 function isConnected() {
-  if (getToken() == null || getToken == undefined) {
-    return false;
-  } else {
-    return true;
-  }
+  const token = getToken();
+  return token !== null && token !== undefined;
 }
 
 //Deconnexion en supprimant les cookies
@@ -61,17 +58,13 @@ function dIsconnect() {
   window.location.reload();
 }
 
+//Version lisible du rôle
 const roleMapping = {
   ROLE_ADMIN: "admin",
-  ROLE_EMPLOYE: "employé",
-  ROLE_VETERINAIRE: "vétérinaire",
+  ROLE_EMPLOYE: "employe",
+  ROLE_VETERINAIRE: "veterinaire",
   // Ajouter d'autres rôles si nécessaire
 };
-
-function isAdmin() {
-  const role = getCookie("role");
-  return role === "ROLE_ADMIN"; // Vérifie si le rôle est bien "ROLE_ADMIN"
-}
 
 // Fonction pour obtenir le rôle depuis le cookie
 function getRole() {

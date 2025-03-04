@@ -112,7 +112,6 @@ function checkCredentials() {
       setToken(token);
 
       setCookie(RoleCookieName, result.roles[0], 7);
-
       window.location.href = "/";
     })
     .catch((error) => console.error(error));
